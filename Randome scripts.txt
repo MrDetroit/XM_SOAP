@@ -1,0 +1,12 @@
+${=(int)(Math.random()*9999)} - randome amount 
+${=java.util.UUID.randomUUID()} - randome UUID
+
+
+***********Test data for check version******
+{
+  "line" : "Test Line",
+  "model" : "MODEL-1215",
+  "serialNumber" : "1234567891SN",
+  "componentIds" : ["98600 4 001","481_CAD-0_5012","98124 3 002"]
+}
+********************************************

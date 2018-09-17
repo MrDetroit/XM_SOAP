@@ -1,0 +1,1783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="35e2999b-d2a8-4c06-a7da-857a66f2f736" activeEnvironment="Default" name="Compass Tests" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="bca506ef-4f62-4eeb-85ac-c1d601f7b5d6" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://compass.test.xm-online.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://compass.test.xm-online.com</con:endpoint></con:endpoints><con:resource name="Login" path="/uaa/oauth/token" id="ba773da1-e3ab-45fc-8e76-cf23f7a9a87c"><con:settings/><con:parameters><con:parameter><con:name>host</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>Authorization</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>grant_type</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Login" id="84889e54-4a77-460d-a907-4dbb772f3a4f" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>403 400</con:status><con:params/><con:element xmlns:tok="http://compass.test.xm-online.com/uaa/oauth/token/">tok:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:tok="http://compass.test.xm-online.com/uaa/oauth/token/">tok:Response</con:element></con:representation><con:request name="Request 1" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="creditman"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="creditmanager@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Account" path="/uaa/api/account" id="9fd85e00-dc18-4b36-9111-5ff5d3e53147"><con:settings/><con:parameters/><con:method name="Get Info" id="11e135a3-bbd8-4437-96b7-7a4f2bc35da1" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401 500</con:status><con:params/><con:element xmlns:acc="http://compass.test.xm-online.com/uaa/api/account">acc:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:acc="http://compass.test.xm-online.com/uaa/api/account">acc:Response</con:element></con:representation><con:request name="Request 1" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings/><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Create order" path="/entity/api/xm-entities" id="cefe89fc-bb56-4764-8b66-bf0a9836437c"><con:settings/><con:parameters/><con:method name="Method 1" id="1d21a287-dd87-43c3-8e28-c9ad6066a700" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401 500 400</con:status><con:params/><con:element xmlns:xm="http://compass.test.xm-online.com/entity/api/xm-entities">xm:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:xm="http://compass.test.xm-online.com/entity/api/xm-entities">xm:Response</con:element></con:representation><con:request name="Request 1" id="63e84aab-4587-41d7-9940-1ffe08d4708f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{"key":"bc83eaa7-a939-defe-cdbe-fac297e76fd2",
+"typeKey":"ORDER",
+"stateKey":"PROCESSED",
+"name":"Test order 1",
+"startDate":null,
+"updateDate":null,
+"endDate":null,
+"description":"",
+"data":
+{"sapOrderId":"12545845",
+"sapCustomerId":"new-company-2222",
+"amount":100,
+"priceOfCredits":1,
+"currency":"AED",
+"salesChannel":"Vending",
+"salesOrganization":"test",
+"salesPerson":"test"},
+"removed":false}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="CHECK-VERSION" path="/entity/api/functions/CHECK-VERSION" id="ba9bef62-9890-492f-b08f-d811a405993f"><con:settings/><con:parameters/><con:method name="Method 1" id="75e3c91f-2a3b-4815-af4e-fbd7e64cd239" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:chec="http://compass.test.xm-online.com/entity/api/functions/CHECK-VERSION">chec:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500 400</con:status><con:params/><con:element xmlns:chec="http://compass.test.xm-online.com/entity/api/functions/CHECK-VERSION">chec:Fault</con:element></con:representation><con:request name="Request 1" id="b0164c13-7326-47ba-b2eb-330793e56d36" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "line" : "Test Line",
+  "model" : "MODEL-1215",
+  "serialNumber" : "123456789SN",
+  "componentIds" : ["Basic f/w 1.12.13-15"]
+}
+</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="get prod" path="/entity/api/_search/xm-entities" id="d744b854-da1e-45ef-9aa6-3678650bc503"><con:settings/><con:parameters><con:parameter><con:name>typeKey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>page</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>size</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>query</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>sort</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="6882f3f7-859c-4a01-a3ea-4070489f27b8" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>404 403 401 500</con:status><con:params/><con:element xmlns:xm="http://compass.test.xm-online.com/api/_search/xm-entities">xm:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="4162430f-5a65-4b05-8cb3-80420a4a94f6" mediaType="application/json"><con:settings/><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="typeKey" value="RESOURCE.PRODUCT"/>
+  <con:entry key="size" value="10"/>
+  <con:entry key="query" value="{&quot;template&quot;: &quot;CUSTOMER_PRODUCTS&quot;, &quot;templateParams&quot;: {&quot;customerAccount&quot;: 5516}}"/>
+  <con:entry key="page" value="0"/>
+  <con:entry key="sort" value="id,desc"/>
+</con:parameters><con:parameterOrder><con:entry>typeKey</con:entry><con:entry>page</con:entry><con:entry>size</con:entry><con:entry>query</con:entry><con:entry>sort</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="GET-PROFILES (f/w list)" path="/entity/api/functions/GET-PROFILES" id="352bf584-2558-49c8-848b-228269a1513f"><con:settings/><con:parameters/><con:method name="Method 1" id="8cf04e19-1fc8-4b6f-a800-c42ca31d9a42" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500 401</con:status><con:params/><con:element xmlns:get="http://compass.test.xm-online.com/entity/api/functions/GET-PROFILES">get:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:get="http://compass.test.xm-online.com/entity/api/functions/GET-PROFILES">get:Response</con:element></con:representation><con:request name="Request 1" id="172887c5-2d51-4c59-9a20-e346e8750b0b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "componentIds" : ["...", "...", ...]
+}
+</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="GET-CUSTOMER-BALANCE" path="/entity/api/functions/GET-CUSTOMER-BALANCE" id="a7dab355-f3e5-4cea-97ce-e0c4e4979032"><con:settings/><con:parameters/><con:method name="Method 1" id="d3bc2c2d-640e-4695-a646-1d5c49ccda5e" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:get="http://compass.test.xm-online.com/entity/api/functions/GET-CUSTOMER-BALANCE">get:Response</con:element></con:representation><con:request name="Request 1" id="8cf457ef-f3b4-4988-ad17-98238aa15db3" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYzMTY2MTAyNDEsInVzZXJfbmFtZSI6ImNhYXBpQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DVVNUT01FUl9BR0VOVCIsInVzZXJfa2V5IjoiZTJlNDU1MWYtMjAyOC00ZWJiLWFhMGMtMzcxNGVhY2VhNTA1IiwiZXhwIjoxNTM2MzU5ODEwLCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiY2FhcGlAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVJfQUdFTlQiXSwianRpIjoiNDY0NTc3MzEtOTAxZi00Yzg5LWEyZTktZWU0MDU0MzI3ZTA4IiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.Cj9oHWQyLAYuWjHsejocmtP9BJqj7PFO_pKxQPv0FUd9V2PDtkz6yntM2DARrWnmMdwnMtjU6gOHWM98GfyRVQMRjSV0ZlOcvDzc_ezRwMnaWicKAXUfdCgnVCQ-T_lRrqF1Kr3RicAnuZShW1IdWVwUbSolbmGwwSaoSAyojqXod_uNsxGvZxwwaADil_-mFIcvQUS1cAtVF-JZ0-fEoHnBu3wbBMp2YNaaGiwApiOm6w8_dEPRol1aLrnQ2r4t1nmDkfEmHwMg5G7Q1gR8a140pJOV8RR5oxGDNMRQQGTz9RNWe-hyEUPOqVZ17zQdfl6eyFbmIdzK7nZHVzUXUg" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/GET-CUSTOMER-BALANCE</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="ADD-SPECIFICATION" path="/entity/api/functions/ADD-SPECIFICATION" id="3dd86183-dd7f-4e44-9bd2-13ce55945325"><con:settings/><con:parameters/><con:method name="Method 1" id="3fd953b0-8505-4871-a0f5-81200833f59f" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:add="http://compass.test.xm-online.com/entity/api/functions/ADD-SPECIFICATION">add:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>text/xml</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>500</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>multipart/form-data</con:mediaType><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>multipart/mixed</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="3d0e5b82-deb9-413e-852f-b13e01f6032e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "prodSpec":[
+    {
+      "name":"BNA6",
+      "line":"BNR",
+      "component":[
+        {
+          "name":"BNR Firmware",
+          "description":"BNR Firmwares v1.13.1",
+          "type":"Firmware",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":false,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"v2.0.0",
+              "description":"BNR Firmware v2.0.0 \n Hardware compatibility \n• Due to introduction of new CPU and Sensor PCBA’s. \n• Adaptation to electro-mechanical change to drive new sensors and solenoid. \nProduct Enhancement \n• Banknotes storage increase in memory from 60 to 150 notes \n• Capability for BNR Main Module to communicate to host its own internal temperature. \n• Firmware sequence changes to reduce jam risks. \n• Firmware changes to facilitate repair operations. \n• Increase bill transport error report size to facilitate BNR diagnostics. \n• Improved Firmware and Bill set Security by adding cryptographic digital signature. (Not included in RC version) \nBug Fixes \n• XChannel signal low for short time.",
+              "componentId":"98600 6 000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            },
+            {
+              "name":"v1.13.1",
+              "description":"BNR Firmwares v1.13.1",
+              "componentId":"98124 2 131",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            },
+            {
+              "name":"v2.0.1",
+              "description":"BNR Firmware v2.0.1",
+              "componentId":"98600 4 001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.0.2",
+              "description":"BNR Firmware v2.0.2",
+              "componentId":"98600 2 002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.1.0",
+              "description":"BNR Firmware v2.1.0",
+              "componentId":"98600 3 010",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"CAMBODIA (KHR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5004",
+              "description":"500 A 500 B 1000 A 1000 B 1000 C 2000 A 2000 B 5000 A 5000 B 10000 A 10000 B 20000 A 20000 B",
+              "componentId":"481_KHR-0_5004",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CANADA (CAD)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5012",
+              "description":"5 A 5 B 5 C 10 A 10 B 10 C 10 D 20 A 20 B 20 C 50 A 50 B 100 A 100 B",
+              "componentId":"481_CAD-0_5012",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_CAD-0_5012_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHILE (CLP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"1000 B 2000 C 5000 B 10000 D 20000 B",
+              "componentId":"481_CLP-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHINA (CNY)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_CNY-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"COLOMBIA (COP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5000",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_COP-0_5000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"EUROZONE (EUR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5013",
+              "description":"5 A 5 B 10 A 10 B 20 A 20 B 50 A 50 B 100 A 200 A 500 A",
+              "componentId":"481_EUR-0_5013",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_EUR-0_5013_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDIA (INR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"1_5024",
+              "description":"5 A 10 A 10 C 20 A 50 A 50 B 100 A 200 A 500 D 2000 A",
+              "componentId":"481_INR-1_5024",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDONESIA (IDR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"1000 A 1000 B 2000 A 2000 B 5000 A 5000 B 10000 B 10000 C 10000 D 20000 B 20000 C 20000 D 50000 B 50000 C 50000 D 100000 B 100000 D",
+              "componentId":"481_IDR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"KENYA (KES)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"50 A 100 A 200 A 500 A 1000 A",
+              "componentId":"481_KES-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"MACAO (MOP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 E 10 F 10 G 20 C 20 E 50 C 50 D 100 C 100 E 500 B 500 E 1000 B 1000 E",
+              "componentId":"481_MOP-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"OMAN (OMR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"0.10 A 0.20 A 0.50 A 1 A 1 B 1 D 5 A 5 B 10 A 20 C 50 B",
+              "componentId":"481_OMR-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PAKISTAN (PKR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 A 20 A 50 A 100 A 500 A 1000 A 5000 A",
+              "componentId":"481_PKR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PERU (PEN)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 B 10 C 10 D 20 B 20 C 20 D 50 B 50 C 100 C 100 D 200 B",
+              "componentId":"481_PEN-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"RUSSIAN FEDERATION (RUB)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 A 50 A 100 A 200 A 500 B 500 C 1000 B 1000 C 2000 A 5000 A 5000 B",
+              "componentId":"481_RUB-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder><con:entry/></con:parameterOrder></con:request></con:method></con:resource><con:resource name="CREDITS-USAGE-REPORT" path="/entity/api/functions/CREDITS-USAGE-REPORT" id="c6e314a3-ccdc-446d-a19e-f04dfd44ad77"><con:settings/><con:parameters/><con:method name="Method 1" id="d353b07d-06a9-4714-bf62-d3436262d4b8" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:cred="http://compass.test.xm-online.com/entity/api/functions/CREDITS-USAGE-REPORT">cred:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="7f723bdb-1893-427d-a01f-7b0ed86762c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+	"dateFrom" : "2018-09-10",
+	"dateTo" : "2018-09-11"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="SIGN-AND-CHARGE" path="/entity/api/functions/SIGN-AND-CHARGE" id="8367bb59-0d4d-4b2e-aa37-9ff09a8b117e"><con:settings/><con:parameters/><con:method name="Method 1" id="42a0b99d-4b0f-424a-8cc4-1a84b25559a5" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201 200</con:status><con:params/><con:element xmlns:sign="http://compass.test.xm-online.com/entity/api/functions/SIGN-AND-CHARGE">sign:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>400 500 401</con:status><con:params/><con:element xmlns:sign="http://compass.test.xm-online.com/entity/api/functions/SIGN-AND-CHARGE">sign:Fault</con:element></con:representation><con:request name="Request 1" id="05d3f36d-a574-42c7-b362-b0ff93e8d7c1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+	"header": "ABCD",
+	"amount": 100,
+	"serialNumber": "0000000000001",
+	"componentId": "481_CAD-0_5012"
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/SIGN-AND-CHARGE</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="REQUEST-CRYPTO-TOKEN" path="/entity/api/functions/REQUEST-CRYPTO-TOKEN" id="adf3395c-f144-4bcf-aa01-943303032dd2"><con:settings/><con:parameters/><con:method name="Method 1" id="b13d3a3f-4c48-44fe-9c6d-61bf81bbbab4" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401 500</con:status><con:params/><con:element xmlns:req="http://compass.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN">req:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="eb292f86-2fe5-4af1-b4a5-e74ae2a1a9f2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{ 
+	"keyId": "6454"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="36cf0c88-c3be-49ae-8c57-40e799a7bd09" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://compass.xm-online.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://compass.xm-online.com</con:endpoint></con:endpoints><con:resource name="ADD-SPECIFICATION" path="/entity/api/functions/ADD-SPECIFICATION" id="dfb92686-6f9b-43b7-ac45-bc885df8dc22"><con:settings/><con:parameters/><con:method name="Method 1" id="8a18fdf3-c807-4e1b-af25-fd227030b791" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:add="http://compass.xm-online.com/entity/api/functions/ADD-SPECIFICATION">add:Fault</con:element></con:representation><con:request name="Request 1" id="462dc3bb-7a88-4632-9344-41b749d04e00" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.xm-online.com</con:endpoint><con:request>{
+  "prodSpec":[
+    {
+      "name":"BNA6",
+      "line":"BNR",
+      "component":[
+        {
+          "name":"BNR Firmware",
+          "description":"BNR Firmwares v1.13.1",
+          "type":"Firmware",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":false,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"v2.0.0",
+              "description":"BNR Firmware v2.0.0 \n Hardware compatibility \n• Due to introduction of new CPU and Sensor PCBA’s. \n• Adaptation to electro-mechanical change to drive new sensors and solenoid. \nProduct Enhancement \n• Banknotes storage increase in memory from 60 to 150 notes \n• Capability for BNR Main Module to communicate to host its own internal temperature. \n• Firmware sequence changes to reduce jam risks. \n• Firmware changes to facilitate repair operations. \n• Increase bill transport error report size to facilitate BNR diagnostics. \n• Improved Firmware and Bill set Security by adding cryptographic digital signature. (Not included in RC version) \nBug Fixes \n• XChannel signal low for short time.",
+              "componentId":"98600 6 000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            },
+            {
+              "name":"v1.13.1",
+              "description":"BNR Firmwares v1.13.1",
+              "componentId":"98124 2 131",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            },
+            {
+              "name":"v2.0.1",
+              "description":"BNR Firmware v2.0.1",
+              "componentId":"98600 4 001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.0.2",
+              "description":"BNR Firmware v2.0.2",
+              "componentId":"98600 2 002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.1.0",
+              "description":"BNR Firmware v2.1.0",
+              "componentId":"98600 3 010",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"CAMBODIA (KHR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5004",
+              "description":"500 A 500 B 1000 A 1000 B 1000 C 2000 A 2000 B 5000 A 5000 B 10000 A 10000 B 20000 A 20000 B",
+              "componentId":"481_KHR-0_5004",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CANADA (CAD)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5012",
+              "description":"5 A 5 B 5 C 10 A 10 B 10 C 10 D 20 A 20 B 20 C 50 A 50 B 100 A 100 B",
+              "componentId":"481_CAD-0_5012",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_CAD-0_5012_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHILE (CLP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"1000 B 2000 C 5000 B 10000 D 20000 B",
+              "componentId":"481_CLP-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHINA (CNY)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_CNY-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"COLOMBIA (COP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5000",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_COP-0_5000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"EUROZONE (EUR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5013",
+              "description":"5 A 5 B 10 A 10 B 20 A 20 B 50 A 50 B 100 A 200 A 500 A",
+              "componentId":"481_EUR-0_5013",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_EUR-0_5013_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDIA (INR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"1_5024",
+              "description":"5 A 10 A 10 C 20 A 50 A 50 B 100 A 200 A 500 D 2000 A",
+              "componentId":"481_INR-1_5024",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDONESIA (IDR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"1000 A 1000 B 2000 A 2000 B 5000 A 5000 B 10000 B 10000 C 10000 D 20000 B 20000 C 20000 D 50000 B 50000 C 50000 D 100000 B 100000 D",
+              "componentId":"481_IDR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"KENYA (KES)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"50 A 100 A 200 A 500 A 1000 A",
+              "componentId":"481_KES-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"MACAO (MOP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 E 10 F 10 G 20 C 20 E 50 C 50 D 100 C 100 E 500 B 500 E 1000 B 1000 E",
+              "componentId":"481_MOP-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"OMAN (OMR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"0.10 A 0.20 A 0.50 A 1 A 1 B 1 D 5 A 5 B 10 A 20 C 50 B",
+              "componentId":"481_OMR-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PAKISTAN (PKR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 A 20 A 50 A 100 A 500 A 1000 A 5000 A",
+              "componentId":"481_PKR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PERU (PEN)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 B 10 C 10 D 20 B 20 C 20 D 50 B 50 C 100 C 100 D 200 B",
+              "componentId":"481_PEN-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"RUSSIAN FEDERATION (RUB)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 A 50 A 100 A 200 A 500 B 500 C 1000 B 1000 C 2000 A 5000 A 5000 B",
+              "componentId":"481_RUB-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="291bbda7-3a75-4dc8-89bc-10500a7ccc4b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://appsec.test.xm-online.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://appsec.test.xm-online.com</con:endpoint></con:endpoints><con:resource name="REQUEST-CRYPTO-TOKEN" path="/entity/api/functions/REQUEST-CRYPTO-TOKEN" id="6776f713-86b2-406b-b290-51bd1c83d6b3"><con:settings/><con:parameters/><con:method name="Method 1" id="6a13971e-6a82-426f-bfb8-e820cb01f868" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401 500 404</con:status><con:params/><con:element xmlns:req="http://appsec.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN">req:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:req="http://appsec.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN">req:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:req="http://appsec.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN">req:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="8717aaae-e1a9-4a8f-a769-1b91c9eca240" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request>{ 
+	"keyId": "1406"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="token" path="/uaa/oauth/token" id="1f9cc7ea-09ed-48d6-a3aa-e6d013406981"><con:settings/><con:parameters><con:parameter><con:name>host</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>Authorization</con:name><con:value/><con:style>HEADER</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>grant_type</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>username</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Method 1" id="e7cb9dca-ab82-407d-b290-7762fee5357a" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:tok="http://appsec.test.xm-online.com/uaa/oauth/token">tok:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:tok="http://appsec.test.xm-online.com/uaa/oauth/token">tok:Response</con:element></con:representation><con:request name="Request 1" id="87d4794b-e598-4666-bd4e-a90664482280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://appsec.test.xm-online.com/uaa/oauth/token</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="appsec.test.xm-online.com"/>
+  <con:entry key="username" value="appsec"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="GET-PRODUCT-SPECS" path="/entity/api/functions/GET-PRODUCT-SPECS" id="9ea64847-9fb8-4a67-a676-220e9c8a1298"><con:settings/><con:parameters/><con:method name="Method 1" id="70921f1c-18ed-4f90-8c2a-30228cbc2b0a" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:get="http://appsec.test.xm-online.com/entity/api/functions/GET-PRODUCT-SPECS">get:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:get="http://appsec.test.xm-online.com/entity/api/functions/GET-PRODUCT-SPECS">get:Fault</con:element></con:representation><con:request name="Request 1" id="9f3bab95-09ef-4fa0-a93d-6d2ce673d9b7" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request>{
+	
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="c56bb780-80f6-492d-8e3b-75155398a7a5" name="Auth"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="3304fc82-0c25-408f-9d90-93105774717b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As Credit Manager" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="9f8b0dde-484e-4a5b-a179-b7d8dcbd541a"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYwODM2MjQ1MjYsInVzZXJfbmFtZSI6ImNyZWRpdG1hbmFnZXJAeW9wbWFpbC5jb20iLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJST0xFX0NSRURJVF9NQU5BR0VSIiwidXNlcl9rZXkiOiI3MTZmZjRhMi0yZDUzLTQzYmUtOWVlMi05YTdhNThhZTBmZmQiLCJleHAiOjE1MzYxMjY4MjQsImFkZGl0aW9uYWxEZXRhaWxzIjp7fSwibG9naW5zIjpbeyJ0eXBlS2V5IjoiTE9HSU4uRU1BSUwiLCJzdGF0ZUtleSI6bnVsbCwibG9naW4iOiJjcmVkaXRtYW5hZ2VyQHlvcG1haWwuY29tIn1dLCJhdXRob3JpdGllcyI6WyJST0xFX0NSRURJVF9NQU5BR0VSIl0sImp0aSI6IjZmM2E5NTNjLWQzY2YtNDdmNS1iMTRjLTg4MTk3NmE4MTI2YSIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.NZ0qo4Q_aPOXwpmHSeZoOROJNVpQPFwMo2GKHuafafvU0UXRpSDt26XWJkWX7aXQim6UZ60Pm_k__TWNLTjhTSkyp3qYsnFzEt_yMIP3l4_0aeWjs43dy-KbH095Ho2YONv8By5bFjef6NSrDgZdK5L3S-oCgFMpiQiBm1TMx-7XRdZ6HOAVbRgwYpw3GMA8znqaigZ1LbYoRaE9GJUyZRPSCCaPHXiZjEMPD6Rvd2iUVBMdTESdtVauH2pmjVc4yYh6SWkiYLgzMb7_gbWJIatWUP5zquYr83R4_yBo0eQFayqYlE9e8A07Kz1SKHXQw0ifFKo8lWrAd4w279oeTQ</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as cm" id="9a5d869d-899d-4866-beab-475d50d958cc"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as cm" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="creditman"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="creditmanager@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="fc6f895f-750c-4f31-9c79-a9c602a4dcbb"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as cm</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Am I CM" id="8ecc0d5e-ee3e-4c9a-b321-6a0d711cd973"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Am I CM" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="ed3ff499-631c-4fbd-b8a8-c81471eb672a" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CREDIT_MANAGER</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a0c14395-eede-49a1-96cb-26427696af65" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As CPI Admin" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as cpi admin" id="371d1ad0-b6b4-4e51-82d7-89d834a38ce2"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as cpi admin" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="cpi@dmin"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="cpiadmin@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="5ee4f302-268a-41f9-aed8-a6278d6d12b9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYwODM2Mjc3NTAsInVzZXJfbmFtZSI6ImNwaWFkbWluQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DUElfQURNSU4iLCJ1c2VyX2tleSI6IjE3ZjFhNjg5LTU4YjEtNDMwYS05ZjYxLTBjM2U3Nzk3NTAxNyIsImV4cCI6MTUzNjEyNjgyNywiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNwaWFkbWluQHlvcG1haWwuY29tIn1dLCJhdXRob3JpdGllcyI6WyJST0xFX0NQSV9BRE1JTiJdLCJqdGkiOiJlNzZlNzk4Yy02NDkzLTQwODYtOGY2Ny0yZWI3Y2M0ODRmNDgiLCJ0ZW5hbnQiOiJDT01QQVNTIiwiY2xpZW50X2lkIjoiaW50ZXJuYWwifQ.Vt5oD8MIfudnmS1FTKw08mg7iZew_CqCg6pKWbYjavbjOjAJ-x_uv_JCCUnrPfiBj5rF_8bXmptXRtL8s4hTQEVm-sTM0I_hG3w8thVsU7e2zpuc2uXlPjwVnQEeN-D-AYaz8qfp508PtGfdiNu9HHVFHKMZRVCd5Z6pxdopcSVyi2a60T3mFD8tY5AMBd_zZe8Bszx2H-VzUneSF8aXmAEh0KGxZRgCkg-W0rVYjTn0l1Q_H-sWfa6sob5wOt6_ImMff1nPtV5bEtIKfRuc3KnkYc0YndLP7cIEoJ2qY7MZHBUdV-IH2PNrIU5uXegv_Wpxts5N_nFLOF6Z2iuSlA</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="26515aae-14e1-4328-b762-8a3a3413be4a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as cpi admin</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I CPI Admin" id="0843ca66-1ddd-432a-9535-5020d2bc7912"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I CPI Admin" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="4849050d-7b66-4973-976f-7dc3ff9a3d75" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CPI_ADMIN</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="38fa8573-cfb1-4df4-9bd3-623b5bf9339e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As Sales Support" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as sales support" id="65cfbd2c-c113-4a24-952b-8158c3f08287"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as sales support" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="S@pp0rt"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="salessupport@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="e34e9ad4-1ad3-46e8-a921-40c0fac1df9d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYwODM2MzA5MDUsInVzZXJfbmFtZSI6InNhbGVzc3VwcG9ydEB5b3BtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlJPTEVfU0FMRVNfU1VQUE9SVCIsInVzZXJfa2V5IjoiNjU5ZjhhZjgtZTNkYi00ZGVkLTk1NjItMTc3NzgzODM4MjE3IiwiZXhwIjoxNTM2MTI2ODMwLCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoic2FsZXNzdXBwb3J0QHlvcG1haWwuY29tIn1dLCJhdXRob3JpdGllcyI6WyJST0xFX1NBTEVTX1NVUFBPUlQiXSwianRpIjoiZjViZDg3Y2EtZGNmOS00YTI4LWFhMWMtYWNjZjhmYTU3MTcxIiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.iFFRQLkt3Gcrki2qEiAZiDPBniYC2tg9ROw-Mlob3X0j8CvOPzzBBzJnWdhhtqK9w3znFbkn9gjb1cbDBlo_C6JSz4uHhs_8NehWGT_6Ag_eDamHbgdODPEcTMFCruycNayNo5gAYgcH4AuebkvW2Fo_FyNKCjnlNuM_XrqX5QG7liaIoP2IgoGYC4vA_sBRU1TDtVTWKHG8Je4NnYiJxz-9eSHyjCSwtVZO8Is8l7uIZ8euUdhZX1d-OrHkvBOsRwzEJHFKPAs6emmSxaS6mWEJYIqulyWdzfgGagN4Y1wUa3Yb6ywLguNADK-hy_oBzKB_LB86tumIsZQsCGKQhg</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="e3dd230a-920a-4fe6-96c7-eecad67e3ef9"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as sales support</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I SS" id="4366f869-c2d0-471e-afef-b66201def59c"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I SS" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="5cf4b486-3250-4391-a727-c50b51a5de4b" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_SALES_SUPPORT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4290900b-ec5a-47ab-a4b3-c228d96e0a20" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As API User" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as Customer User (Customer Agent)" id="ff4df297-34a3-4bbc-bf26-2e748ebd7748"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as Customer User (Customer Agent)" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="caapi@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="3162ab0e-379d-4a5a-8486-1280ce2734db"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYzMTY2MTAyNDEsInVzZXJfbmFtZSI6ImNhYXBpQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DVVNUT01FUl9BR0VOVCIsInVzZXJfa2V5IjoiZTJlNDU1MWYtMjAyOC00ZWJiLWFhMGMtMzcxNGVhY2VhNTA1IiwiZXhwIjoxNTM2MzU5ODEwLCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiY2FhcGlAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVJfQUdFTlQiXSwianRpIjoiNDY0NTc3MzEtOTAxZi00Yzg5LWEyZTktZWU0MDU0MzI3ZTA4IiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.Cj9oHWQyLAYuWjHsejocmtP9BJqj7PFO_pKxQPv0FUd9V2PDtkz6yntM2DARrWnmMdwnMtjU6gOHWM98GfyRVQMRjSV0ZlOcvDzc_ezRwMnaWicKAXUfdCgnVCQ-T_lRrqF1Kr3RicAnuZShW1IdWVwUbSolbmGwwSaoSAyojqXod_uNsxGvZxwwaADil_-mFIcvQUS1cAtVF-JZ0-fEoHnBu3wbBMp2YNaaGiwApiOm6w8_dEPRol1aLrnQ2r4t1nmDkfEmHwMg5G7Q1gR8a140pJOV8RR5oxGDNMRQQGTz9RNWe-hyEUPOqVZ17zQdfl6eyFbmIdzK7nZHVzUXUg</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="aa97b824-e719-4d3a-914b-439b44c9628d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as Customer User (Customer Agent)</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I CU Admin" id="0011edba-eae6-47c3-b20a-eac3b9fd1dfe"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I CU Admin" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="5cf4b486-3250-4391-a727-c50b51a5de4b" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CUSTOMER_AGENT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8028dd3a-4c99-4bc8-95b1-431edfa83739" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As CA 2" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as CA 2" id="58c587e7-7006-40c9-a514-fe81b04f39df"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as CA 2" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="sonyadmin@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="5aa4cf5e-acfb-4273-a672-e62a987e8912"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYxNTI2NzUxMzQsInVzZXJfbmFtZSI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlJPTEVfQ1VTVE9NRVJfQUdFTlQiLCJ1c2VyX2tleSI6IjkzNDk4YzA0LTIyNGEtNDVhYi1hZmYyLTg0OTNjMzRlOWRhZiIsImV4cCI6MTUzNjE5NTg3NSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSJ9XSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUl9BR0VOVCJdLCJqdGkiOiI2YzYzZTZiMC0yMzRmLTQyYmMtODZkNy05MzkxODk5NTEzMTciLCJ0ZW5hbnQiOiJDT01QQVNTIiwiY2xpZW50X2lkIjoiaW50ZXJuYWwifQ.SUx1HsXhPUSpUQDNMiOFAh07ZFwlo-nPRy7148NjVGzLpDH6ZthwQ26O74jIwkX9F34H9lUD7LbSnuUtZWX73y5sTK3lEvO3h-g-L3oObBCj6ku3X4hCw6D2a14eDxEXKl4yT4SNF0arcSAkYuhGIvWESEulXXr-oFd5qsZTlq3pbUrW0p5Gh71pbyW_ttn_GTDf4zuId9BTQuZdc_4-6G4SeOu9yhcMS9-CenpQfdfGW1CH5emI2Cw_dEH0jki9hXbrgDvLmTiIp60JwdjkT-_nfYjW5IIbUvkw28jwxenEXY10kVaUnnrBpuZUuWKih20u7L-Xyb-xq_ceqToIBw</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="372d28ea-8d70-4dc6-a614-4d736ad0d0b3"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as CA 2</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I CA 2" id="e4c5fade-ff5b-4a33-bed3-c3da6bd8c88a"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I CA 2" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="c35e6b77-0f8f-4d8e-8ab0-4215873e857a" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CUSTOMER_AGENT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6d061d2b-d6ee-40c0-8cdf-bdd4b2a808bd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login as SA" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as super admin" id="48335908-4c01-46f9-823a-1ae5b2768f09"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as super admin" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="compass"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="e4df7735-36f7-4750-b9c0-01b22027aa49"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sa_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYxNTQ3Njk3MzYsInVzZXJfbmFtZSI6ImNvbXBhc3MiLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJTVVBFUi1BRE1JTiIsInVzZXJfa2V5IjoiY29tcGFzcyIsImV4cCI6MTUzNjE5Nzk2OSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5OSUNLTkFNRSIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3MifSx7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3NAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlNVUEVSLUFETUlOIl0sImp0aSI6IjA3N2Y1ZTUxLTg0NDgtNDk2My05NDBjLTc4YjM1ZWI4MTNlYyIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.esYoJ1hhBR3g0cGPUyr2T2kQdZXzvALihdcwl8r5i5Uk391jju3RUK32f1nC9uQRqiWNJQR9hJGwx2LMAEsL_CJf8dmcaSLvrwLKo5UG-hMG22-s_a0a-iJRcFrN1bzFSYjso2ImaS0-7E3YF_uSeCQ4OaH-kSqZKx7ko-GP9VwIAbZnaR3xvpbWBWLaXlgvvNod40WfbOUV9XmBHY1ZNxNaxL3w0RTQ__Va4TTYXUFSmT8t2NTWiYCxIbicBIOXfnry30AkOyigacDKYWR7lWI2V0KyJ54Ba8TQgSvkSi5Dz7A0o9yWnfWYq-EsI9vdvxBpzxfk26UXgm4TCzx5Iw</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="sa_token" id="c3233a6b-b206-4d94-8228-8bca6380b0b6"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sa_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as super admin</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>sa_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I SA" id="573d72e3-22bf-4e89-bf1a-a0ad473fc9a0"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I SA" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#sa_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="5d94ac95-fb4b-415a-bb10-d2ad48ae4e75" name="JsonPath Match"><con:configuration><path>roleKey</path><content>SUPER-ADMIN</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="58dfcd2a-dd96-4921-9992-a67f5b419340" name="CM Functionality"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8d2eb957-38ba-43e5-a5ee-5532623303a6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login As Credit Manager" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="1b9048ce-36e5-459b-9ed9-bc3365bcbe02"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYxNDEwNDc2NDksInVzZXJfbmFtZSI6ImNyZWRpdG1hbmFnZXJAeW9wbWFpbC5jb20iLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJST0xFX0NSRURJVF9NQU5BR0VSIiwidXNlcl9rZXkiOiI3MTZmZjRhMi0yZDUzLTQzYmUtOWVlMi05YTdhNThhZTBmZmQiLCJleHAiOjE1MzYxODQyNDcsImFkZGl0aW9uYWxEZXRhaWxzIjp7fSwibG9naW5zIjpbeyJ0eXBlS2V5IjoiTE9HSU4uRU1BSUwiLCJzdGF0ZUtleSI6bnVsbCwibG9naW4iOiJjcmVkaXRtYW5hZ2VyQHlvcG1haWwuY29tIn1dLCJhdXRob3JpdGllcyI6WyJST0xFX0NSRURJVF9NQU5BR0VSIl0sImp0aSI6IjA2ZDBkOWFlLTRjYjAtNDE2Ni1iNDA5LTE2MDIzZDcwOTRmOSIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.Ps9RFS3Ok0oK2L6XtRlhTigyE9_DJI5JJUAzHxgJ8mtC2hvAIyEuUqFXGI6sOnvf9_HFZ7cUdtnbhwbPVHbliwqqL7CXMZQUICxWOQz6JUuYcbM9KuOcaICPiO3KlsNRv7oRfuJfcpyofNXM0kwWgtfLEZ4f7ZItreTLzh9XigNgO5MwlrZtpyHHOxASFQTCbibSVQhlFXGtk2cNFniKYp5qcvSGdVN4oc2X3I1cAcuZQUFpFOvon1OE48pse-Z4kGZzEubMn_Ufhyq1Ur14gIza26l-YjHOnZ1jFOIoI2OIQeDFBh7DOjHIcNRV2dKgTKAeZTXLov4fqX1K2HEkew</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as cm" id="086ed7ca-746e-418d-9bb0-693a88f5eb04"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as cm" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="creditman"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="creditmanager@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="fffaa247-1ffd-4930-bcae-0585b8b738b0"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as cm</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Am I CM" id="578edb0b-3521-4f00-80b9-b1e52db03d8c"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Am I CM" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="ed3ff499-631c-4fbd-b8a8-c81471eb672a" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CREDIT_MANAGER</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="fb2327cc-4647-415b-9e98-376395d87ddf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create order for Customer Agent 1" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="7e420827-1d0c-4438-86e6-d480e9937621"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYxNDIwNTczOTEsInVzZXJfbmFtZSI6ImNyZWRpdG1hbmFnZXJAeW9wbWFpbC5jb20iLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJST0xFX0NSRURJVF9NQU5BR0VSIiwidXNlcl9rZXkiOiI3MTZmZjRhMi0yZDUzLTQzYmUtOWVlMi05YTdhNThhZTBmZmQiLCJleHAiOjE1MzYxODUyNTcsImFkZGl0aW9uYWxEZXRhaWxzIjp7fSwibG9naW5zIjpbeyJ0eXBlS2V5IjoiTE9HSU4uRU1BSUwiLCJzdGF0ZUtleSI6bnVsbCwibG9naW4iOiJjcmVkaXRtYW5hZ2VyQHlvcG1haWwuY29tIn1dLCJhdXRob3JpdGllcyI6WyJST0xFX0NSRURJVF9NQU5BR0VSIl0sImp0aSI6ImQ5N2RjYzQ1LTUyOWYtNDE0OS1iNzRiLWQ1YjY0M2M4OTA4NSIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.ISUnW9bwr4M40Q7MeyO3r690nbSRuPE0wgBYvCmByCqZJadEOO-5xVsRdGKj_Bd-3Ep1FDAvtpR4WEv7KFMQ4CNIt7ForoD6wxd91rY4SbkezzZdtTEZQ2h1zZV1gov0wI-Ia6IQBvoYomWcHCmzSCPJSeepQtjlrZ69nmMk5aItNXCDWkTNjUiDU65KRU5bp2bE8-fCQY6NMhJY2ibO0VLSa1NcxOuGEUt0lIckUTq-dZJc_g13A9r3poJvZH8VUN3ckNDe9s4schQBMoOlkXTqe51M5Xm-1QWQsifSjCjt9-6nchRoPDVJdg94mBv5HFYeBv3jrHVNrfpyTKeLDg</con:value></con:property><con:property><con:name>order_id</con:name><con:value>${=java.util.UUID.randomUUID()}</con:value></con:property><con:property><con:name>amount</con:name><con:value>${=(int)(Math.random()*999)}</con:value></con:property><con:property><con:name>ca_id</con:name><con:value>SAP-API-1600015</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as cm" id="191a729d-eec0-4f72-9bda-683f5239ba07"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as cm" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="creditman"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="creditmanager@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="3c76751c-e302-473e-97c3-9cf5dcee5d01"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as cm</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create order" id="7349681c-d7b2-40da-9323-6211aac4a703"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/xm-entities" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create order" id="63e84aab-4587-41d7-9940-1ffe08d4708f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{"key":"bc83eaa7-a939-defe-cdbe-fac297e76fd2",
+"typeKey":"ORDER",
+"stateKey":"PROCESSED",
+"name":"Test order 1",
+"startDate":null,
+"updateDate":null,
+"endDate":null,
+"description":"",
+"data":
+{"sapOrderId":"${props#order_id}",
+"sapCustomerId":"${props#ca_id}",
+"amount":${props#amount},
+"priceOfCredits":1,
+"currency":"AED",
+"salesChannel":"Vending",
+"salesOrganization":"test",
+"salesPerson":"test"},
+"removed":false}</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/xm-entities</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="47d36db7-b9e6-41c9-a827-cc2d6dca44ef" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="66824271-f17a-426e-aa71-ce8edf531c0b" name="Check Version"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="fd3492dc-2f6f-4715-99fe-e9ec43902c5e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create Product CA1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as Customer User (Customer Agent)" id="6c5bf2d0-4320-4485-ac0f-19db4e5725a9"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as Customer User (Customer Agent)" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="caapi@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="b4b2cf5b-9633-4e1e-9363-aa43f2ba688f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYxNTUwMjE3OTQsInVzZXJfbmFtZSI6ImNhYXBpQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DVVNUT01FUl9BR0VOVCIsInVzZXJfa2V5IjoiZTJlNDU1MWYtMjAyOC00ZWJiLWFhMGMtMzcxNGVhY2VhNTA1IiwiZXhwIjoxNTM2MTk4MjIxLCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiY2FhcGlAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVJfQUdFTlQiXSwianRpIjoiZDU4OTMzMzgtYTEyZS00MTQ0LWE3NzYtNGFhNDA2ZGQxZTQ3IiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.VYoxDNnJHG-cJ_aQMZhT2jt4KXJSJf_RMorFPEBGmtibRKIb0GSQvDx10W8ybAkn9V2iTNnfaBQmeYCdYq2Vpc6ssRS9a39NG5mHy3ILegZAS4D9-E4-vHRdfrmLRnvhA7vS_1FYa1U6t-ROfhiy3dLTXe0JA-G7I6x5OiI1YxOQHRq4t7b6TmQZ9-LeupRkr-LdlCTu9ruiA8Yp_KmDDm42v3eBc0cK2SSbw8eZ_9StHlTNZPzE2CnWxPZj1ROzka9bX1qn6zR58QJNp8fxLmO7WMkHDahl8423aG53yPPD395MEJ6KC48vymWbhLEEuLHEA3dV7i_sn52cVKMRDA</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="33d6d66c-bd1c-45ef-afd5-8c01f5b3977c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as Customer User (Customer Agent)</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I CU Admin" id="3e308c22-6833-463c-b328-5fb83589deb6"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I CU Admin" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="5cf4b486-3250-4391-a727-c50b51a5de4b" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CUSTOMER_AGENT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="f406694d-a078-4633-9864-32d9e5c09011" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Create Prod (CHK Version)" id="8afa4131-7aea-468e-ac9f-88171466d47e"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/CHECK-VERSION" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create Prod (CHK Version)" id="b0164c13-7326-47ba-b2eb-330793e56d36" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "line" : "Test Line",
+  "model" : "MODEL-1215",
+  "serialNumber" : "123456789SN",
+  "componentIds" : ["Basic f/w 1.12.13-15","Update-252526-2"]
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/CHECK-VERSION</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d470ff43-70e2-4650-b1f9-c8c16bdc487e" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e4745ac5-492e-4ea4-b6b7-39780cffb279" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Link Product from CA1 to CA2" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as Customer User (Customer Agent)" id="0e1a6cfb-132f-46f3-9c6f-61c811b2a755"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as Customer User (Customer Agent)" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="caapi@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="3736ad9f-e6e0-407a-83ab-fefe6858162d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>access_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYzMTM3ODgwNjMsInVzZXJfbmFtZSI6ImNhYXBpQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DVVNUT01FUl9BR0VOVCIsInVzZXJfa2V5IjoiZTJlNDU1MWYtMjAyOC00ZWJiLWFhMGMtMzcxNGVhY2VhNTA1IiwiZXhwIjoxNTM2MzU2OTg4LCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiY2FhcGlAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVJfQUdFTlQiXSwianRpIjoiMTRlMDAzYjctYWVjMi00Njc0LTljNjktMDdhMDBhYzIwZGRkIiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.LcT6ai40aDK7HePBfaoALuUjKJZMVQM0h6guBPtjWRFkHLHsYKX0yM9QEVE5RkfAhVm3RK3Au6rS2Q7p3aD8XrDDz4158-dC8gE5a6rWPMo8gEZopQ9toA6coJCreIQhkf19nIdDgOgUwOqdlaEqLvzlLm34VrMGbVKWGwctmxn5f6_ORw3eQVRiCgsti8jLjFXdhpl3GrQDoW9N237Ttm-Fzq_kXyAvsvUnNyNrfNrlMTg9_wYaKApFfFoMgDLMPM8JCLBCXV2XonGCEJe6XqdMjk6QeHK2C3rtTlCMAgyY76W8R5IscH3bfxf4-ND0Ntm_9c0whRe5-tRSYj2ROA</con:value></con:property><con:property><con:name>access_token_ca2</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzYzMTM3OTY0MDQsInVzZXJfbmFtZSI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlJPTEVfQ1VTVE9NRVJfQUdFTlQiLCJ1c2VyX2tleSI6IjkzNDk4YzA0LTIyNGEtNDVhYi1hZmYyLTg0OTNjMzRlOWRhZiIsImV4cCI6MTUzNjM1Njk5NiwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSJ9XSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUl9BR0VOVCJdLCJqdGkiOiIxMmFjMTRiNi01NzU1LTRiNzItOTg3NC0zMTg2YTg5MTgxNGYiLCJ0ZW5hbnQiOiJDT01QQVNTIiwiY2xpZW50X2lkIjoiaW50ZXJuYWwifQ.OHSIkJLufHcHXLAS5KL-Z2RFUwLHAjJxvFCvR11v0ayYORocCaUtIl7u_ATkPXDlYSvHlTAJoGcW5p_AOIxHQxWGCJ_iDZ3Z1b5yx3IcWPFP9QyclH-eifcxcwYdrZ5AmeAjacxTbf82Z_r7O3DKqc32oAcx4jVBATZxHiAs--CSxQ-Gel9OrZTxiDN5uEGtOiFih6xGMmRRONpdPtGLDhJB68r1deaf_LR9C6RolfViVBLJupbW0eFQzS3aZZfJHDWfVZTkpH3fAKgQGs8jgsrf4JOPn-O_E_-BE4uZBWalPDrokPjPVbV5Seu1rJLU4JEaPLyRpxkcfkk3j4LvJg</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="get_token" id="701fe540-c971-4cc7-9cdd-f900303e8443"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as Customer User (Customer Agent)</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="AM I CU Admin" id="bace417c-67e8-4f47-806a-6aba8de6b28e"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/api/account" methodName="Get Info" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="AM I CU Admin" id="bcd0751a-6229-4863-aad7-509f0ed349a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/api/account</con:originalUri><con:assertion type="JsonPath Match" id="5cf4b486-3250-4391-a727-c50b51a5de4b" name="JsonPath Match"><con:configuration><path>roleKey</path><content>ROLE_CUSTOMER_AGENT</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="f406694d-a078-4633-9864-32d9e5c09011" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Create Prod (CHK Version) for CA1" id="dc489478-ad02-4f06-a341-6ee6a6b730e9"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/CHECK-VERSION" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create Prod (CHK Version) for CA1" id="b0164c13-7326-47ba-b2eb-330793e56d36" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "line" : "Test Line",
+  "model" : "MODEL-1216",
+  "serialNumber" : "12345678900SN",
+  "componentIds" : ["98600 4 001","481_CAD-0_5012","98124 3 002"]
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/CHECK-VERSION</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d470ff43-70e2-4650-b1f9-c8c16bdc487e" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Login as CA 2" id="610986a7-93e4-4326-813e-9a31fd1efe0d"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as CA 2" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="sonyadmin@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="get_token_CA2" id="cefd4148-4d80-462b-9768-deb8d0e5492c"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>access_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as CA 2</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>access_token_ca2</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create Prod (CHK Version) for CA2 from CA1" id="dda0f98f-f77d-4361-95f9-495ff085ed2c"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/CHECK-VERSION" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create Prod (CHK Version) for CA2 from CA1" id="b0164c13-7326-47ba-b2eb-330793e56d36" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token_ca2}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "line" : "Test Line",
+  "model" : "MODEL-1215",
+  "serialNumber" : "1234567891234SN",
+  "componentIds" : ["98600 2 001","491_CAD-0_5013","98124 3 002"]
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/CHECK-VERSION</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="d470ff43-70e2-4650-b1f9-c8c16bdc487e" name="Valid HTTP Status Codes"><con:configuration><codes>201</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Get Product for CA2" id="2c68aefa-0ec5-4528-8ea0-005216fac3a1"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/_search/xm-entities" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get Product for CA2" id="4162430f-5a65-4b05-8cb3-80420a4a94f6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token_ca2}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/api/_search/xm-entities</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="typeKey" value="RESOURCE.PRODUCT"/>
+  <con:entry key="size" value="10"/>
+  <con:entry key="query" value="{&quot;template&quot;: &quot;CUSTOMER_PRODUCTS&quot;, &quot;templateParams&quot;: {&quot;customerAccount&quot;: 5516}}"/>
+  <con:entry key="page" value="0"/>
+  <con:entry key="sort" value="id,desc"/>
+</con:parameters><con:parameterOrder><con:entry>typeKey</con:entry><con:entry>page</con:entry><con:entry>size</con:entry><con:entry>query</con:entry><con:entry>sort</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Get Product for CA1" id="31d3a40b-c694-4e1d-9d1b-a1c26cd828af"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/_search/xm-entities" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get Product for CA1" id="4162430f-5a65-4b05-8cb3-80420a4a94f6" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/api/_search/xm-entities</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="typeKey" value="RESOURCE.PRODUCT"/>
+  <con:entry key="size" value="10"/>
+  <con:entry key="query" value="{&quot;template&quot;: &quot;CUSTOMER_PRODUCTS&quot;, &quot;templateParams&quot;: {&quot;customerAccount&quot;: 5643}}"/>
+  <con:entry key="page" value="0"/>
+  <con:entry key="sort" value="id,desc"/>
+</con:parameters><con:parameterOrder><con:entry>typeKey</con:entry><con:entry>page</con:entry><con:entry>size</con:entry><con:entry>query</con:entry><con:entry>sort</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="489563bc-79c2-43a8-9647-02677b81d3a7" name="List of f/w"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0f9bad7a-a085-447b-a65d-0e22bd6f607b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get list" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="cc766466-d927-4a58-ad0d-d902f41921ac"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ca2_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY3NTEwOTE5NTQsInVzZXJfbmFtZSI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlJPTEVfQ1VTVE9NRVJfQUdFTlQiLCJ1c2VyX2tleSI6IjkzNDk4YzA0LTIyNGEtNDVhYi1hZmYyLTg0OTNjMzRlOWRhZiIsImV4cCI6MTUzNjc5NDI5MSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6InNvbnlhZG1pbkB5b3BtYWlsLmNvbSJ9XSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUl9BR0VOVCJdLCJqdGkiOiIxZWZkOWNiOC00ZWMzLTQ4NTEtOWU3OC1mZWJkNzM4YzY3ZTkiLCJ0ZW5hbnQiOiJDT01QQVNTIiwiY2xpZW50X2lkIjoiaW50ZXJuYWwifQ.NQKVXKRiwVRCzo5Lg_p7JXF8srdF8MQ2vI8UrLZVgcTQl3tXNw34ihjUJI47qh89Qo02GW0RYgGcGm6JNyMBxZpuq6gKMJ_UL1kvOWYWYkoZ459JXESSX1XuT2Ew3SgxueQ5LwN7XHLV36fzPthdmJeRy1l1DPB_y2NQ10CL8YiRgxM6fL62ItZzGDwek0FPGYBfa6VAuD0t4LedIzths8aCSBIj7a4Ew1oDFkAbNmsTmkBhih8spUfgxRzDRTf3mTScjFcYcIK7w0MpXDIcIICe30UViFSf-Mjh4G0V0NrDnxQHfiXDtxyjzW0GrWloTQny5mSqI-zAVl50d5ek0A</con:value></con:property><con:property><con:name>comp_id</con:name><con:value>98600 4 001</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as CA 2" id="8a3daf2e-b484-4d68-be8b-77b980abbbeb"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as CA 2" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="sonyadmin@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="ca2_token" id="f7d0197b-4b01-455f-a973-3fd89e42a25f"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ca2_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as CA 2</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>ca2_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="List of f/w by component" id="7dcd98b5-9c17-460f-8700-16fffdcbd23d"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/GET-PROFILES" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="List of f/w by component" id="172887c5-2d51-4c59-9a20-e346e8750b0b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#ca2_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "componentIds" : ["${props#comp_id}"]
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/GET-PROFILES</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="4260ca2c-2918-47d2-b99c-57cec0a5176a" name="Create spec prod"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6159a8ed-90e9-4c9b-bea8-6dec52a1b813" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create by template" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="c0c78450-a9c1-4f58-a2e6-2e4bdc052149"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sa_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY2NjE1Njk4ODcsInVzZXJfbmFtZSI6ImNvbXBhc3MiLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJTVVBFUi1BRE1JTiIsInVzZXJfa2V5IjoiY29tcGFzcyIsImV4cCI6MTUzNjcwNDc2OSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5OSUNLTkFNRSIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3MifSx7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3NAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlNVUEVSLUFETUlOIl0sImp0aSI6ImFmYjA0Nzc3LWU3MWUtNDVlOC1hMmY3LTMxZjMxZGJhYjY5OCIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.AA7z4s9AVUbtQDmWsnTQnKB03B3LazdGKFL6uS_6TiXOsV2M1VC3Y5gQUJIN8zm_YgbR1R5XajUwFbo7oPzXCaYSjbqCl0M7tyCr9vb5gWKXQ2xiG7OBEvJzCkhOR6oP3JClWnUUHZUAYNWv1Xg3oDfnYFcjp5c-1X00exzmlIAl-GPOGcy4-pgHIQl1wDL8mqhlY0J7gS5zOuzv2NSeS02di9OSZCuYWz4uJti_j1YLnT8HKa_cZMnppBHkNkCssUepE7Dpd6ZXYJWmljqDBHsdTpxmb_1oPXuNGBl7xjGp7o4nAZFeNK2QsDuTUW3T6jbOUCp8stcCAnqk2CXGGQ</con:value></con:property><con:property><con:name>sa_propd_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY2NTg0MzU1MzUsInVzZXJfbmFtZSI6ImNvbXBhc3MiLCJzY29wZSI6WyJvcGVuaWQiXSwicm9sZV9rZXkiOiJTVVBFUi1BRE1JTiIsInVzZXJfa2V5IjoiY29tcGFzcyIsImV4cCI6MTUzNjcwMTYzNSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5OSUNLTkFNRSIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3MifSx7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImNvbXBhc3NAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlNVUEVSLUFETUlOIl0sImp0aSI6ImMwODBmMzc4LTMyYTMtNDgwNS1iYjdlLWE3MzIzMzRjYmNjYyIsInRlbmFudCI6IkNPTVBBU1MiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.hHprxBbqjqf186JqxY8I_0wtJT1EnvsI8Ic6RtkwnlWpZuNTdzfx9-qY4dbYKx1XpeJW4HqLUZusoT91xC6sp1IZmV0GNQ0XO3alFaYQkORs753JLhN60JazHVBLq5OmzRb-UrGRTBEnIBatjiLl88BA1-vqB1qMJV21Yt75QG9rxwvNxKE83BsCbacW5oea3bojs48d6XmmvzkqBKn8yF3GSaL_Xhm-zqBllKwWrIolYQRHBC87EJj0sRRJnibUDtkGceziue3IdfcTpwhLFu6QM6Le3fmaRcGgFnVxnqGflQIMyLQx4hdjpGGwMvF5-rihV6HC20Teeo5qtzAUVg</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as SA" id="de65919b-fce9-4a80-b942-b7954c294051"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as SA" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="compass"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="sa_token" id="f9fcb73c-1d14-4b80-a0ee-43aa347b1bbd"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sa_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as SA</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>sa_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create spec" id="9de5ecd0-59ce-4aff-a0c7-eddf056d6996"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/ADD-SPECIFICATION" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create spec" id="3d0e5b82-deb9-413e-852f-b13e01f6032e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="Authorization" value="bearer ${props#sa_token}"/>
+  &lt;con:entry key="Cache-Control" value="no-cache"/>
+&lt;/xml-fragment></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+  "prodSpec":[
+    {
+      "name":"BNA6",
+      "line":"BNR",
+      "component":[
+        {
+          "name":"BNR Firmware",
+          "description":"BNR Firmwares v1.13.1",
+          "type":"Firmware",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":false,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"v2.0.0",
+              "description":"BNR Firmware v2.0.0 \n Hardware compatibility \n• Due to introduction of new CPU and Sensor PCBA’s. \n• Adaptation to electro-mechanical change to drive new sensors and solenoid. \nProduct Enhancement \n• Banknotes storage increase in memory from 60 to 150 notes \n• Capability for BNR Main Module to communicate to host its own internal temperature. \n• Firmware sequence changes to reduce jam risks. \n• Firmware changes to facilitate repair operations. \n• Increase bill transport error report size to facilitate BNR diagnostics. \n• Improved Firmware and Bill set Security by adding cryptographic digital signature. (Not included in RC version) \nBug Fixes \n• XChannel signal low for short time.",
+              "componentId":"98600 6 000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            },
+            {
+              "name":"v1.13.1",
+              "description":"BNR Firmwares v1.13.1",
+              "componentId":"98124 2 131",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            },
+            {
+              "name":"v2.0.1",
+              "description":"BNR Firmware v2.0.1",
+              "componentId":"98600 4 001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.0.2",
+              "description":"BNR Firmware v2.0.2",
+              "componentId":"98600 2 002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.1.0",
+              "description":"BNR Firmware v2.1.0",
+              "componentId":"98600 3 010",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"CAMBODIA (KHR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5004",
+              "description":"500 A 500 B 1000 A 1000 B 1000 C 2000 A 2000 B 5000 A 5000 B 10000 A 10000 B 20000 A 20000 B",
+              "componentId":"481_KHR-0_5004",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CANADA (CAD)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5012",
+              "description":"5 A 5 B 5 C 10 A 10 B 10 C 10 D 20 A 20 B 20 C 50 A 50 B 100 A 100 B",
+              "componentId":"481_CAD-0_5012",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_CAD-0_5012_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHILE (CLP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"1000 B 2000 C 5000 B 10000 D 20000 B",
+              "componentId":"481_CLP-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHINA (CNY)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_CNY-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"COLOMBIA (COP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5000",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_COP-0_5000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"EUROZONE (EUR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5013",
+              "description":"5 A 5 B 10 A 10 B 20 A 20 B 50 A 50 B 100 A 200 A 500 A",
+              "componentId":"481_EUR-0_5013",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_EUR-0_5013_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDIA (INR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"1_5024",
+              "description":"5 A 10 A 10 C 20 A 50 A 50 B 100 A 200 A 500 D 2000 A",
+              "componentId":"481_INR-1_5024",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDONESIA (IDR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"1000 A 1000 B 2000 A 2000 B 5000 A 5000 B 10000 B 10000 C 10000 D 20000 B 20000 C 20000 D 50000 B 50000 C 50000 D 100000 B 100000 D",
+              "componentId":"481_IDR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"KENYA (KES)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"50 A 100 A 200 A 500 A 1000 A",
+              "componentId":"481_KES-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"MACAO (MOP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 E 10 F 10 G 20 C 20 E 50 C 50 D 100 C 100 E 500 B 500 E 1000 B 1000 E",
+              "componentId":"481_MOP-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"OMAN (OMR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"0.10 A 0.20 A 0.50 A 1 A 1 B 1 D 5 A 5 B 10 A 20 C 50 B",
+              "componentId":"481_OMR-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PAKISTAN (PKR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 A 20 A 50 A 100 A 500 A 1000 A 5000 A",
+              "componentId":"481_PKR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PERU (PEN)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 B 10 C 10 D 20 B 20 C 20 D 50 B 50 C 100 C 100 D 200 B",
+              "componentId":"481_PEN-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"RUSSIAN FEDERATION (RUB)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 A 50 A 100 A 200 A 500 B 500 C 1000 B 1000 C 2000 A 5000 A 5000 B",
+              "componentId":"481_RUB-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/ADD-SPECIFICATION</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Login as SA PROD" id="34ad5aaf-0726-4de0-8df9-d4ca97286135"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as SA PROD" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="compass"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="sa_prod_token" id="e147bb9d-3421-4031-aefa-1978e41f18b0"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sa_prod_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as SA PROD</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>sa_propd_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create on Prod" id="5ce86eea-0f95-4fec-89a6-409a68235ab8"><con:settings/><con:config service="http://compass.xm-online.com" resourcePath="/entity/api/functions/ADD-SPECIFICATION" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create on Prod" id="462dc3bb-7a88-4632-9344-41b749d04e00" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#sa_propd_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.xm-online.com</con:endpoint><con:request>{
+  "prodSpec":[
+    {
+      "name":"BNA6",
+      "line":"BNR",
+      "component":[
+        {
+          "name":"BNR Firmware",
+          "description":"BNR Firmwares v1.13.1",
+          "type":"Firmware",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":false,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"v2.0.0",
+              "description":"BNR Firmware v2.0.0 \n Hardware compatibility \n• Due to introduction of new CPU and Sensor PCBA’s. \n• Adaptation to electro-mechanical change to drive new sensors and solenoid. \nProduct Enhancement \n• Banknotes storage increase in memory from 60 to 150 notes \n• Capability for BNR Main Module to communicate to host its own internal temperature. \n• Firmware sequence changes to reduce jam risks. \n• Firmware changes to facilitate repair operations. \n• Increase bill transport error report size to facilitate BNR diagnostics. \n• Improved Firmware and Bill set Security by adding cryptographic digital signature. (Not included in RC version) \nBug Fixes \n• XChannel signal low for short time.",
+              "componentId":"98600 6 000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            },
+            {
+              "name":"v1.13.1",
+              "description":"BNR Firmwares v1.13.1",
+              "componentId":"98124 2 131",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            },
+            {
+              "name":"v2.0.1",
+              "description":"BNR Firmware v2.0.1",
+              "componentId":"98600 4 001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.0.2",
+              "description":"BNR Firmware v2.0.2",
+              "componentId":"98600 2 002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            },
+            {
+              "name":"v2.1.0",
+              "description":"BNR Firmware v2.1.0",
+              "componentId":"98600 3 010",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"CAMBODIA (KHR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5004",
+              "description":"500 A 500 B 1000 A 1000 B 1000 C 2000 A 2000 B 5000 A 5000 B 10000 A 10000 B 20000 A 20000 B",
+              "componentId":"481_KHR-0_5004",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"98600 6 000 - BNR Firmwares-2.0.0.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CANADA (CAD)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5012",
+              "description":"5 A 5 B 5 C 10 A 10 B 10 C 10 D 20 A 20 B 20 C 50 A 50 B 100 A 100 B",
+              "componentId":"481_CAD-0_5012",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_CAD-0_5012_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHILE (CLP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"1000 B 2000 C 5000 B 10000 D 20000 B",
+              "componentId":"481_CLP-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"CHINA (CNY)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_CNY-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"COLOMBIA (COP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5000",
+              "description":"1 A 1 B 2 A 5 A 5 B 10 A 10 B 20 A 50 A 50 B 50 C 100 A 100 B 100 D",
+              "componentId":"481_COP-0_5000",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":true
+            }
+          ]
+        },
+        {
+          "name":"EUROZONE (EUR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5013",
+              "description":"5 A 5 B 10 A 10 B 20 A 20 B 50 A 50 B 100 A 200 A 500 A",
+              "componentId":"481_EUR-0_5013",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"BNRB_481_EUR-0_5013_Variant.zip",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDIA (INR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"1_5024",
+              "description":"5 A 10 A 10 C 20 A 50 A 50 B 100 A 200 A 500 D 2000 A",
+              "componentId":"481_INR-1_5024",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"INDONESIA (IDR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"1000 A 1000 B 2000 A 2000 B 5000 A 5000 B 10000 B 10000 C 10000 D 20000 B 20000 C 20000 D 50000 B 50000 C 50000 D 100000 B 100000 D",
+              "componentId":"481_IDR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"KENYA (KES)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"50 A 100 A 200 A 500 A 1000 A",
+              "componentId":"481_KES-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"MACAO (MOP)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 E 10 F 10 G 20 C 20 E 50 C 50 D 100 C 100 E 500 B 500 E 1000 B 1000 E",
+              "componentId":"481_MOP-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"OMAN (OMR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5002",
+              "description":"0.10 A 0.20 A 0.50 A 1 A 1 B 1 D 5 A 5 B 10 A 20 C 50 B",
+              "componentId":"481_OMR-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PAKISTAN (PKR)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5001",
+              "description":"10 A 20 A 50 A 100 A 500 A 1000 A 5000 A",
+              "componentId":"481_PKR-0_5001",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"PERU (PEN)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 B 10 C 10 D 20 B 20 C 20 D 50 B 50 C 100 C 100 D 200 B",
+              "componentId":"481_PEN-0_5003",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        },
+        {
+          "name":"RUSSIAN FEDERATION (RUB)",
+          "description":"",
+          "type":"Variant",
+          "min":1,
+          "max":1,
+          "componentIdFormat":"",
+          "versionFormat":"",
+          "removeAllowed":true,
+          "addRule":"",
+          "upgradeRule":"",
+          "downgradeRule":"",
+          "version":[
+            {
+              "name":"0_5003",
+              "description":"10 A 50 A 100 A 200 A 500 B 500 C 1000 B 1000 C 2000 A 5000 A 5000 B",
+              "componentId":"481_RUB-0_5002",
+              "releaseDate":"2018-09-04T13:23:29.240Z",
+              "fileId":"",
+              "isNew":false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</con:request><con:originalUri>http://compass.xm-online.com/entity/api/functions/ADD-SPECIFICATION</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="5eda9fa2-fd83-427f-92c6-612a157577cd" name="Generation of usage transaction files"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="af1326b0-66b0-4054-8a41-64b21a41e92f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Generation" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="45c132f5-919a-485b-beed-e97077590a6e"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ca1_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY3NTI5NzU4MDEsInVzZXJfbmFtZSI6ImNhYXBpQHlvcG1haWwuY29tIiwic2NvcGUiOlsib3BlbmlkIl0sInJvbGVfa2V5IjoiUk9MRV9DVVNUT01FUl9BR0VOVCIsInVzZXJfa2V5IjoiZTJlNDU1MWYtMjAyOC00ZWJiLWFhMGMtMzcxNGVhY2VhNTA1IiwiZXhwIjoxNTM2Nzk2MTc1LCJhZGRpdGlvbmFsRGV0YWlscyI6e30sImxvZ2lucyI6W3sidHlwZUtleSI6IkxPR0lOLkVNQUlMIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiY2FhcGlAeW9wbWFpbC5jb20ifV0sImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVJfQUdFTlQiXSwianRpIjoiNzcxYTNhNTgtZWMyOS00NDcwLTg2NmUtYWFjYmM5ZGJmNDcyIiwidGVuYW50IjoiQ09NUEFTUyIsImNsaWVudF9pZCI6ImludGVybmFsIn0.l1FDzZAwSu47i2orfzr8ZY030mDPlHYo-AjogOn2aMKyFMzl0NEenn4vDXe-GoESPrrz4wIfjHP9BwRGJcHqkToOY4085u4iJFDMtYoTXW3-VNYwk987QzRhyYiBRRcIffrmU48F63zBne51qdREBB9CcLORkE0lnoRrP3Nrxblnq5n6esY2lWauCPYbho3_5VTVfMl3TLTVGZ2twgquzS9AEHlzvkNUkSS-K5X083OZpNvpbfrXoB586eBVq66eBxymtGmJKdgLWz280y2Vm2j2ULSKHkyQhrGhfFZX5EgLxjLKal3z4WYWNJE3uMT3U429MSE9DUy8Tjv4GqSIOA</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as CA1" id="ffcaf246-9424-41bb-83ca-d59a0967edef"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as CA1" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="caapi@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="ca1_token" id="b1684079-04db-448d-ab97-5ad6d7c6a157"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ca1_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as CA1</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>ca1_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Generate report" id="8c141b95-1171-4c04-bc45-6f671a01a101"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/CREDITS-USAGE-REPORT" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Generate report" id="7f723bdb-1893-427d-a01f-7b0ed86762c3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#ca1_token}" xmlns="http://eviware.com/soapui/config"/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@dump-file"/></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+	"dateFrom" : "2018-09-11",
+	"dateTo" : "2018-09-12"
+}</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/CREDITS-USAGE-REPORT</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="e854b34a-b09c-4aff-ba77-1d7313b78fdd" name="Sign and Charge"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6405bc36-0b32-48a0-ae93-7b30b70d298d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Charge for Update" searchProperties="true"><con:settings/><con:testStep type="properties" name="props" id="8514d2e8-c5a2-4652-88d4-8cdecea77e6b"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ca1_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY5MzgwNTE1MzEsInVzZXJfbmFtZSI6ImFuZHJldy13d3ctMTExMUB5b3BtYWlsLmNvbSIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlJPTEVfQ1VTVE9NRVJfQUdFTlQiLCJ1c2VyX2tleSI6ImY0ZjE4MDBmLTI4ZDUtNGYwNC1hMmQ2LTY0NDc2NTRmMDRiNSIsImV4cCI6MTUzNjk4MTI1MSwiYWRkaXRpb25hbERldGFpbHMiOnt9LCJsb2dpbnMiOlt7InR5cGVLZXkiOiJMT0dJTi5FTUFJTCIsInN0YXRlS2V5IjpudWxsLCJsb2dpbiI6ImFuZHJldy13d3ctMTExMUB5b3BtYWlsLmNvbSJ9XSwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUl9BR0VOVCJdLCJqdGkiOiI2NTkzNTg3NS03NjU0LTQwZWYtYTQ1ZC0xM2FjZWM4NDUxM2EiLCJ0ZW5hbnQiOiJDT01QQVNTIiwiY2xpZW50X2lkIjoiaW50ZXJuYWwifQ.jrUhtOuZq_X3pruEkYwCB1impYYP6uRZuDzPjtV4M9Bv-WwvNRFQdwY9iX3CQHbLHvz_r86HGzBNKpPLTLTrCtG3vCjv8hhUTpPZlN40DNfP_Lk0krkk0oWxwF_ka80EPQrIwZpDPestlqvuAC04FbZoZAjBlmd075WS5DVt6riyTzlCLB-CSK5dalrFH3HzerjP429ZIKJ1DGKhcVqjHkRIQwEqKd0OP3jNrsp4iKKntBXQzF-65i7Gndvew6nz7584sKsSoq4lxHlSn9Z_XGxyiaFsOjY6rYAAiPFJAWZpSxF6uKvVgh1xd3AzSdxVQZSndI4C6pvJgf1myA5Hiw</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Login as CA1" id="81234c4a-2a22-4c6d-8b1a-f66ba47c44d0"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as CA1" id="64831092-aa3b-4f77-8dd6-d008ade275b8" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://compass.test.xm-online.com/uaa/oauth/token/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="1111"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="compass.test.xm-online.com"/>
+  <con:entry key="username" value="andrew-www-1111@yopmail.com"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="ca1_token" id="86540264-b7ac-4883-b468-6b683e3b9746"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>ca1_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as CA1</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>ca1_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Charge CA1 for prod ID" id="6ce74c81-f66f-4d3a-9d39-607156147657"><con:settings/><con:config service="http://compass.test.xm-online.com" resourcePath="/entity/api/functions/SIGN-AND-CHARGE" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Charge CA1 for prod ID" id="05d3f36d-a574-42c7-b362-b0ff93e8d7c1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#ca1_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://compass.test.xm-online.com</con:endpoint><con:request>{
+	"header": "someABCDEFtypeCamelCase12345",
+	"amount": 100,
+	"serialNumber": "0000000000001",
+	"componentId ": "481_CAD-0_5012"
+}
+</con:request><con:originalUri>http://compass.test.xm-online.com/entity/api/functions/SIGN-AND-CHARGE</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="f9e04d2a-a2b0-45c4-a256-1cbcefbcc056" name="Request Crypto Token (APPSEC)"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7bf91959-0f63-4daf-8d6c-e630134c056c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get Token" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as SA APPSEC" id="444bc296-6f48-469b-b054-677d5eb8dae4"><con:settings/><con:config service="http://appsec.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as SA APPSEC" id="87d4794b-e598-4666-bd4e-a90664482280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://appsec.test.xm-online.com/uaa/oauth/token</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="appsec.test.xm-online.com"/>
+  <con:entry key="username" value="appsec"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="sa_token" id="b077def0-aadd-40ba-a74b-9befe792666a"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sa_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as SA APPSEC</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>sa_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="properties" name="props" id="1e48446b-ced9-41ff-b892-b27f4a52025b"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sa_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY5MzY4OTc2MDAsInVzZXJfbmFtZSI6ImFwcHNlYyIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlNVUEVSLUFETUlOIiwidXNlcl9rZXkiOiJhcHBzZWMiLCJleHAiOjE1MzY5ODAwOTcsImFkZGl0aW9uYWxEZXRhaWxzIjp7fSwibG9naW5zIjpbeyJ0eXBlS2V5IjoiTE9HSU4uRU1BSUwiLCJzdGF0ZUtleSI6bnVsbCwibG9naW4iOiJhcHBzZWNAeG0tb25saW5lLmNvbS51YSJ9LHsidHlwZUtleSI6IkxPR0lOLk5JQ0tOQU1FIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiYXBwc2VjIn1dLCJhdXRob3JpdGllcyI6WyJTVVBFUi1BRE1JTiJdLCJqdGkiOiJlY2MzNGIxYy1kNTVlLTRmM2UtYTc1MS0yZDk0OWY5ZTViZTMiLCJ0ZW5hbnQiOiJBUFBTRUMiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.fwuW0TxW3q5Za7oI99hxrU_XicxBrqo-_qvYiAM0EXoETJdl7CqpOIKwcEvo30zVThl5s442bDfW5GYWNC9gtYurELxPQivTl1h1WKM6F7BaMCuuUMfi6sg4QtgCwiw7RdWNC14c8OoYQZJL96UXeYPydM1qQ40wx1AIR6pcO4nqQSYzz2aikAF1geLj953OGxRg9UOJM_s_agRQG2AxFb14jk6lFgBHmSKHIK_wSNslAP98BCr37end9bl7ktKKi07VatQuXlYKMhaaCIvBjYlN_Sa9QSosTNvRHFrDmu5LqICU3IQNWMfp3iVTXuGhTU3ysIIPH62DtXBHuH4Bjw</con:value></con:property><con:property><con:name>cy_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY5MzY4OTg0MzQsInNjb3BlIjpbIm9wZW5pZCJdLCJ1c2VyX2tleSI6ImFwcHNlYyIsImV4cCI6MTUzNjk0MDQ5OCwia2V5Ijp7InNlY3VyaXR5TGV2ZWwiOiJtZWRpdW0iLCJwZXJpb2RPZlZhbCI6eyJ2YWxpZEZyb20iOiIyMDE4LTA5LTEyVDAwOjAwOjAwWiIsInZhbGlkVW50aWwiOiIyMDE4LTA5LTE1VDAwOjAwOjAwWiJ9LCJmdW5jdGlvbiI6IkRhdGFFbmNpcGhlcm1lbnQiLCJrZXlJZCI6IjE0MTUxNiIsImtleVR5cGUiOiJUZXN0IiwiZW5jQWxnb3J5dGhtIjoiQUVTMTI4In19.n_KqWuVpE1k2vkrWy4EIkrDGRGQDPmZbgCT9mzY0_W5ujQEDlWjomqfNfgOSEKIwlP5ROHvQz-D1uMCwOzXJtpLOHFMV56MItSdng2IYHHwdI63VKI-HbNehZyvU1O0b0gVIzM3g8HDWSxG1342t__OJ5isvVb3WO-0EHCsghVMQid2hTkwuce619ugg3sf_MM30Y0iW21L4nJAMohSGalR5aj9j4pWpemiNuPDWrOEIYJGD95GG8i0zMf8QZLTfRikOjFomuaFbcUrZRLw2odDycQBYf2QC5trVqgaxr-zPXoPOkQLQWrxZDH4EiAwB9gXYMWrzhq_LR3VKnFhO3Q</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="get token" id="fa3261fb-c766-4568-b3f6-c2cc3de86806"><con:settings/><con:config service="http://appsec.test.xm-online.com" resourcePath="/entity/api/functions/REQUEST-CRYPTO-TOKEN" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="get token" id="8717aaae-e1a9-4a8f-a769-1b91c9eca240" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#sa_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request>{ 
+	"keyId": "141516"
+}</con:request><con:originalUri>http://appsec.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="cy_token" id="ddf53dec-d0f0-4ef8-b34e-39b60080e4a6"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="true" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>cy_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>get token</con:sourceStep><con:sourcePath>$.data.cryptoToken</con:sourcePath><con:targetType>cy_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="get request id" id="53479f33-2525-468f-a410-2074e5759360"><con:settings/><con:config service="http://appsec.test.xm-online.com" resourcePath="/entity/api/functions/REQUEST-CRYPTO-TOKEN" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="get request id" id="8717aaae-e1a9-4a8f-a769-1b91c9eca240" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#sa_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request>{ 
+	"requestId": "1155"
+}</con:request><con:originalUri>http://appsec.test.xm-online.com/entity/api/functions/REQUEST-CRYPTO-TOKEN</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="96111fef-c6ac-4d6a-9917-7684b47e098f" name="Get Propd Spec (APPCES)"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b9ec0330-fb29-468a-8ab8-a1d169744e44" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get info" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login as SA APP SEC" id="c42f45b3-107e-4cac-b334-8b628b2fdb54"><con:settings/><con:config service="http://appsec.test.xm-online.com" resourcePath="/uaa/oauth/token" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login as SA APP SEC" id="87d4794b-e598-4666-bd4e-a90664482280" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request/><con:originalUri>http://appsec.test.xm-online.com/uaa/oauth/token</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="Authorization" value="Basic aW50ZXJuYWw6aW50ZXJuYWw="/>
+  <con:entry key="password" value="P@ssw0rd"/>
+  <con:entry key="grant_type" value="password"/>
+  <con:entry key="host" value="appsec.test.xm-online.com"/>
+  <con:entry key="username" value="appsec"/>
+</con:parameters><con:parameterOrder><con:entry>host</con:entry><con:entry>Authorization</con:entry><con:entry>grant_type</con:entry><con:entry>password</con:entry><con:entry>username</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="props" id="ff35730a-708d-415e-a2c6-c2720a4e56e9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>sa_token</con:name><con:value>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVUb2tlblRpbWUiOjE1MzY5MzY4NjIyNzEsInVzZXJfbmFtZSI6ImFwcHNlYyIsInNjb3BlIjpbIm9wZW5pZCJdLCJyb2xlX2tleSI6IlNVUEVSLUFETUlOIiwidXNlcl9rZXkiOiJhcHBzZWMiLCJleHAiOjE1MzY5ODAwNjIsImFkZGl0aW9uYWxEZXRhaWxzIjp7fSwibG9naW5zIjpbeyJ0eXBlS2V5IjoiTE9HSU4uRU1BSUwiLCJzdGF0ZUtleSI6bnVsbCwibG9naW4iOiJhcHBzZWNAeG0tb25saW5lLmNvbS51YSJ9LHsidHlwZUtleSI6IkxPR0lOLk5JQ0tOQU1FIiwic3RhdGVLZXkiOm51bGwsImxvZ2luIjoiYXBwc2VjIn1dLCJhdXRob3JpdGllcyI6WyJTVVBFUi1BRE1JTiJdLCJqdGkiOiI2MTg3ZDg1Ny1lNmVhLTRlMGYtYWFmYy0xMjI1ZTQwODcyZDciLCJ0ZW5hbnQiOiJBUFBTRUMiLCJjbGllbnRfaWQiOiJpbnRlcm5hbCJ9.IZjAU7k05Gbfn2ICq7aVCgOV7L591e3WjEcnn16ivhKLgR3xId76faKcDhMfjBnYs4zVQOBS59ffx16vCrCsOyLbzKkSj355gloG81jpQPQfFI3cEWt7WTBeWxBgHmL6BK_xsAvWuvBGuXudG1SD3B8rNd46_3HZGa1b_QLsqaYFqaNhRwdPLdPw5SNpoyyTfNJclZxzz2zUiFAoUgo_Px5Wex90AMxaSEaMcwtt3hJI7ww3JjFfIlqEFrh9qU58jx0vwR28X20BzBjRbMXbT4d1PMNsMn520I6lcQd-Ot46PYpo0pY0fg47irKlQpu7YyOxo1Cq15t502CBYqi_LQ</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="sa_token" id="e4d0fd8d-2968-486a-9467-d663c1f587b0"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>sa_token</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Login as SA APP SEC</con:sourceStep><con:sourcePath>$.access_token</con:sourcePath><con:targetType>sa_token</con:targetType><con:targetStep>props</con:targetStep><con:type>JSONPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Get info list" id="1550a971-683f-44e9-bb81-e68deb8f22dd"><con:settings/><con:config service="http://appsec.test.xm-online.com" resourcePath="/entity/api/functions/GET-PRODUCT-SPECS" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Get info list" id="9f3bab95-09ef-4fa0-a93d-6d2ce673d9b7" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${props#sa_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://appsec.test.xm-online.com</con:endpoint><con:request>{
+"componentId": "481_CAD-0_5012"	
+}</con:request><con:originalUri>http://appsec.test.xm-online.com/entity/api/functions/GET-PRODUCT-SPECS</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
