@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-workspace name="All Tests" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
-  <con:project name="Credits">D:/WORK/XM_SOAP/Credits-soapui-project.xml</con:project>
-  <con:project name="Compass Tests">D:/WORK/XM_SOAP/Compass-Tests-soapui-project.xml</con:project>
-  <con:collectInfoForSupport>false</con:collectInfoForSupport>
-</con:soapui-workspace>
